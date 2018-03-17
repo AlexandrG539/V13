@@ -9,9 +9,11 @@ class V13Test {
     }
     @org.junit.jupiter.api.Test
     void addO() {
-        V13 V13Help = new V13(5);
-        V13Help.addO(3,4);
-        assertEquals(V13Help.fieldArray[3][4],"O");
+        try {
+            V13 V13Help = new V13(1);
+            V13Help.addO(3,4);
+            assertEquals(V13Help.fieldArray[3][4],"O");
+        } catch (Error e){}
     }
 
     @org.junit.jupiter.api.Test
