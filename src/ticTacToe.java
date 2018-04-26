@@ -1,12 +1,11 @@
 
 import java.util.Objects;
 
-public class ticTacToe {
+public class TicTacToe {
     public enum Field { X, O, }
-
     private Field fieldArray[][];
     private int fieldSize;
-    public ticTacToe(int size) {
+    public TicTacToe(int size) {
         if (size <= 1)
             throw new IllegalArgumentException();
         fieldArray = new Field[size][size];

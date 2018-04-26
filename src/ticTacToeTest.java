@@ -3,22 +3,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class ticTacToeTest {
     @org.junit.jupiter.api.Test
     void addX() {
-        ticTacToe ticTacToeHelp = new ticTacToe(5);
+        TicTacToe ticTacToeHelp = new TicTacToe(5);
         ticTacToeHelp.addX(3,4);
-        assertEquals(ticTacToeHelp.get(3,4), ticTacToe.Field.X);
+        assertEquals(ticTacToeHelp.get(3,4), TicTacToe.Field.X);
     }
     @org.junit.jupiter.api.Test
     void addO() {
         try {
-            ticTacToe ticTacToeHelp = new ticTacToe(1);
+            TicTacToe ticTacToeHelp = new TicTacToe(1);
             ticTacToeHelp.addO(3,4);
-            assertEquals(ticTacToeHelp.get(3,4), ticTacToe.Field.O);
+            assertEquals(ticTacToeHelp.get(3,4), TicTacToe.Field.O);
         } catch (IllegalArgumentException e){}
     }
 
     @org.junit.jupiter.api.Test
     void clean() {
-        ticTacToe ticTacToeHelp = new ticTacToe(5);
+        TicTacToe ticTacToeHelp = new TicTacToe(5);
         ticTacToeHelp.addO(3,4);
         ticTacToeHelp.clean(3,4);
         assertEquals(ticTacToeHelp.get(3,4),null);
@@ -26,7 +26,7 @@ class ticTacToeTest {
 
     @org.junit.jupiter.api.Test
     void checkO() {
-        ticTacToe ticTacToeHelp = new ticTacToe(5);
+        TicTacToe ticTacToeHelp = new TicTacToe(5);
         ticTacToeHelp.addO(1,1);
         ticTacToeHelp.addO(2,1);
         ticTacToeHelp.addO(3,1);
@@ -36,7 +36,7 @@ class ticTacToeTest {
 
     @org.junit.jupiter.api.Test
     void checkX() {
-        ticTacToe ticTacToeHelp = new ticTacToe(5);
+        TicTacToe ticTacToeHelp = new TicTacToe(5);
         ticTacToeHelp.addX(1,1);
         ticTacToeHelp.addX(2,2);
         ticTacToeHelp.addX(3,3);
